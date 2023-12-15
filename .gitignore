@@ -1,2 +1,6 @@
 __pycache__
 */__pycache__/*
+.venv
+config.yml
+config.json
+film.json

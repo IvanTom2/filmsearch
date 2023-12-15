@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фильмопоиск</title>
+    <link rel=stylesheet type=text/css href="{{ url('static', filename='css/style.css') }}">
+    <script>
+        function redirectToSearch(event) {
+            if (event.keyCode === 13) {
+                var searchTerm = document.getElementById("searchInput").value;
+                if (searchTerm.trim() !== "") {
+                    var searchUrl = "{{ url('text_search') }}?query=" + encodeURIComponent(searchTerm);
+                    window.location.href = searchUrl;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="{{ url('menu') }}" class="logo">Ваш логотип</a>
+
+        <div class="buttons">
+            <a href="{{ url('default_genre')}}" class="button">По жанрам</a>
+            <a href="{{ url('extended_search')}}" class="button">Расширенный поиск</a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Поиск..." onkeypress="redirectToSearch(event)">
+            <button onclick="redirectToSearch()">Искать</button>
+        </div>
+
+        <a href="{{ url('account') }}" class="account-icon">👤</a>
+    </header>
+
+    <main>
+        {% block main_content %}
+        <h1>...Menu in development...</h1>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; FilmSearchIndustry</p>
+    </footer>
+</body>
+
+</html>

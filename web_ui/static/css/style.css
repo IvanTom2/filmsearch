@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f1f1f1;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.buttons button {
+    padding: 10px;
+    font-size: 1em;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.search-bar input {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.account-icon {
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    padding: 15px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Дополнительные стили, чтобы сделать футер более стильным */
+footer p {
+    margin: 0;
+}
+
+/* Пример стилей для ссылок в футере */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

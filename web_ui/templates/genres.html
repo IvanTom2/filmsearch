@@ -1,6 +1,21 @@
 {% extends "index.html" %}
 
 {% block main_content %}
-<h1>Selected genre is {{ genre }}</h1>
-<h1>...Genres in development...</h1>
+
+<div class="selected_genre">
+    <a>Selected genre {{ selected_genre }} </a>
+</div>
+
+<div class="genres">
+    {% for genre in genres %}
+    <a href="/genres/{{ genre.url }}" class="button">{{ genre.ui }}</a>
+    {% endfor %}
+</div>
+
+<div class="films">
+    {% for film in films %}
+    <a href="/film/{{ film['slug'] }}" class="button">{{ film['name_ru'] }}</a>
+    {% endfor %}
+</div>
+
 {% endblock %}

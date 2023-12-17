@@ -1,6 +1,12 @@
 {% extends 'index.html' %}
 
 {% block main_content %}
-<h1>Query is {{ query }}</h1>
-<h1>...Text Search in development...</h1>
+<h1>Query is {{ query }} </h1>
+
+<div class="films">
+    {% for film in films %}
+    <a href="/film/{{ film['slug'] }}" class="button">{{ film['name_ru'] }}</a>
+    {% endfor %}
+</div>
+
 {% endblock %}

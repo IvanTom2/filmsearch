@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+
+{% block main_content %}
+<img src="{{ url_for('static', path='images/' ~ image_path) }}" alt="poster">
+
+{% for key in film.keys() %}
+<p>{{ film[key] }}</p>
+{% endfor %}
+
+{% endblock %}
